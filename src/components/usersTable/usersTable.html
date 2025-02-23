@@ -1,38 +1,49 @@
-<div x-data="usersTable()" x-init="init()">
-  <h1>Felhasználók listája</h1>
-  <form>
-    <table id="users-table">
-      <thead>
-        <tr>
-          <th @click="sort('id')">ID</th>
-          <th @click="sort('name')">Név</th>
-          <th @click="sort('email')">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <template x-if="users.length === 0">
-          <tr>
-            <td colspan="3">Nincs megjeleníthető adat</td>
-          </tr>
-        </template>
-        <template x-for="user in users" :key="user.id">
-          <tr>
-            <td x-text="user.id"></td>
-            <td x-text="user.name"></td>
-            <td x-text="user.email"></td>
-          </tr>
-        </template>
-      </tbody>
-    </table>
-    <div class="pagination">
-      <button @click.prevent="prevPage()" :disabled="skip === 0">Előző</button>
-      <span>
-        Oldal
-        <span x-text="currentPage()"></span>
-        /
-        <span x-text="totalPages()"></span>
-      </span>
-      <button @click.prevent="nextPage()" :disabled="skip + take >= total">Következő</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  </head>
+  <body>
+    <div x-data="usersTable()" x-init="init()" class="container">
+      <h1 class="title">Felhasználók listája</h1>
+      <form>
+        <table id="users-table" class="table is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th @click="sort('id')">ID</th>
+              <th @click="sort('name')">Név</th>
+              <th @click="sort('email')">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-if="users.length === 0">
+              <tr>
+                <td colspan="3">Nincs megjeleníthető adat</td>
+              </tr>
+            </template>
+            <template x-for="user in users" :key="user.id">
+              <tr>
+                <td x-text="user.id"></td>
+                <td x-text="user.name"></td>
+                <td x-text="user.email"></td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <button class="button" @click.prevent="prevPage()" :disabled="skip === 0">Előző</button>
+          <span>
+            Oldal
+            <span x-text="currentPage()"></span>
+            /
+            <span x-text="totalPages()"></span>
+          </span>
+          <button class="button" @click.prevent="nextPage()" :disabled="skip + take >= total">Következő</button>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </body>
+</html>
