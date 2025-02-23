@@ -1,7 +1,7 @@
 import template from './usersTable.html?raw'
 import './usersTable.css'
-import { pagination } from '../../utils/pagination'
-import { sorting } from '../../utils/sorting'
+import { pagination } from '../../core/util/pagination'
+import { sorting } from '../../core/util/sorting'
 import { getUsers } from '../../api/usersApi'
 import { AlpineComponent } from '../../core/AlpineComponent'
 

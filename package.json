@@ -8,10 +8,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.5",
+    "@vituum/vite-plugin-nunjucks": "^1.1.0",
     "concurrently": "^8.2.2",
     "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.85.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-nunjucks": "^0.2.0"
   },
   "dependencies": {
     "alpinejs": "^3.14.8",

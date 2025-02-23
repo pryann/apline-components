@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "allowJs": true
   },
-  "include": ["src/**/*", "src/index.js", "src/components/usersTable/usersTable.js", "src/utils/pagination.js", "src/utils/sorting.js"],
+  "include": ["src/**/*", "src/index.ts", "src/component/usersTable/usersTable.ts", "src/core/util/pagination.js", "src/core/util/sorting.js", "src/.d.ts"],
   "exclude": ["node_modules"]
 }
