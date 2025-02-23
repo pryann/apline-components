@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "build:ts": "tsc --project tsconfig.json",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "db": "npx json-server --watch db/users.json --port 3001"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "concurrently": "^8.2.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.85.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.8",
+    "axios": "^1.7.9",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "htmx.org": "^1.9.12",
+    "json-server": "^1.0.0-beta.3",
+    "pug": "^3.0.3",
+    "pug-html-loader": "^1.1.7",
+    "pug-plugin": "^6.0.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "vite": "^6.1.1",
+    "vite-plugin-pug": "^0.4.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
