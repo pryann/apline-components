@@ -1,12 +1,16 @@
 {
   "scripts": {
     "build:ts": "tsc --project tsconfig.json",
-    "dev": "vite",
-    "build": "vite build",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev:vite": "vite",
+    "dev": "concurrently \"npm run dev:11ty\" \"npm run dev:vite\"",
+    "build": "npx @11ty/eleventy && vite build",
     "preview": "vite preview",
     "db": "npx json-server --watch db/users.json --port 3001"
   },
+  "type": "module",
   "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
     "@types/node": "^22.13.5",
     "@vituum/vite-plugin-nunjucks": "^1.1.0",
     "concurrently": "^8.2.2",
@@ -24,6 +28,7 @@
     "html-webpack-plugin": "^5.6.3",
     "htmx.org": "^1.9.12",
     "json-server": "^1.0.0-beta.3",
+    "nunjucks": "^3.2.4",
     "pug": "^3.0.3",
     "pug-html-loader": "^1.1.7",
     "pug-plugin": "^6.0.0",
