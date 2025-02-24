@@ -6,16 +6,13 @@ import { sync as globSync } from "glob";
 export default defineConfig({
   plugins: [
     nunjucks({
-      templatesDir: './src/view',
+      templatesDir: './src',
     }),
   ],
-  resolve: {
-    alias: {
-      '@': '/src'
-    }
-  },
   root: path.join(__dirname, "src"),
   server: {
+    port: 8088,
+    open: true,
     fs: {
       allow: ['..']
     }
@@ -24,7 +21,7 @@ export default defineConfig({
     outDir: path.join(__dirname, "dist"),
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src', 'view', 'page', 'index.html'),
+        main: path.resolve(__dirname, 'src',  'index.html'),
       }
     },
   },
@@ -35,5 +32,10 @@ export default defineConfig({
         charset: false,
       },
     },
-  }
+  },
+  resolve: {
+    alias: {
+     '@': path.resolve(__dirname, '.'),
+    }
+  },
 });

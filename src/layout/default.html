@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="author" type="text/plain" href="humans.txt">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
     <meta name="robots" content="index,follow">
     <meta name="description" content="{{ page.description }}">
     {% include "../module/validator.html" %}
+    {% include "../module/sitemap.html" %}
     {% include "../module/favicon.html" %}
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="../assets/scss/main.scss">
+    <script type="module">
+        import Alpine from 'alpinejs'
+        window.Alpine = Alpine
+        Alpine.start()
+    </script>
     {% block head %}{% endblock %}
 </head>
 <body>
     {% include "../module/google-tag-manager.html" %}
     {% block content %}{% endblock %}
-    {% include "../partial/siteFooter.html" %}
+    {% include "../section/siteFooter.html" %}
 </body>
 </html>
