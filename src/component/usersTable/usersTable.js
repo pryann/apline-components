@@ -1,11 +1,8 @@
-import template from './usersTable.html?raw'
-import './usersTable.css'
 import { pagination } from '../../core/util/pagination'
 import { sorting } from '../../core/util/sorting'
 import { getUsers } from '../../api/usersApi'
-import { AlpineComponent } from '../../core/AlpineComponent'
 
-function usersTable() {
+export function usersTable() {
   return {
     users: [],
     email: '',
@@ -44,10 +41,3 @@ function usersTable() {
   }
 }
 
-class UsersTable extends AlpineComponent {
-  constructor() {
-    super(template, usersTable)
-  }
-}
-
-customElements.define('users-table', UsersTable)

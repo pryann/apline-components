@@ -1,4 +1,3 @@
-// Custom colors
 $white: hsl(0, 0%, 100%);
 $custom-orange: hsl(23, 94%, 49%);
 $custom-yellow: hsl(45, 100%, 65%);
@@ -8,23 +7,3 @@ $custom-blue: hsl(205, 100%, 31%);
 $custom-cyan: hsl(196, 100%, 47%);
 $custom-purple: hsl(253, 31%, 60%);
 $family-header: 'Oswald', sans-serif;
-
-// Override Bulma's default variables before importing
-$turquoise: $custom-green !default;
-$cyan: $custom-cyan !default;
-$blue: $custom-blue !default;
-$purple: $custom-purple !default;
-$red: $custom-red !default;
-$orange: $custom-orange !default;
-$yellow: $custom-yellow !default;
-$primary: $custom-cyan !default;
-$link: $custom-blue !default;
-$link-hover: $custom-cyan !default;
-$family-sans-serif: ('Roboto', sans-serif) !default;
-$navbar-breakpoint: 1216px !default;
-
-// Import Bulma's modules
-@import 'bulma/sass/utilities/initial-variables';
-@import 'bulma/sass/utilities/functions';
-@import 'bulma/sass/utilities/derived-variables';
-@import 'bulma/bulma';

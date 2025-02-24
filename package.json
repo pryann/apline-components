@@ -1,24 +1,16 @@
 {
   "scripts": {
     "build:ts": "tsc --project tsconfig.json",
-    "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev:vite": "vite",
-    "dev": "concurrently \"npm run dev:11ty\" \"npm run dev:vite\"",
-    "build": "npx @11ty/eleventy && vite build",
-    "preview": "vite preview",
-    "db": "npx json-server --watch db/users.json --port 3001"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@types/node": "^22.13.5",
-    "@vituum/vite-plugin-nunjucks": "^1.1.0",
-    "concurrently": "^8.2.2",
-    "pug-cli": "^1.0.0-alpha6",
+    "nunjucks": "^3.2.4",
     "sass": "^1.85.0",
-    "typescript": "^5.7.3",
-    "vite-plugin-html": "^3.2.2",
-    "vite-plugin-nunjucks": "^0.2.0"
+    "vite-plugin-nunjucks": "^0.2.0",
+    "vite-plugin-pug": "^0.4.1"
   },
   "dependencies": {
     "alpinejs": "^3.14.8",
@@ -26,17 +18,10 @@
     "bulma": "^1.0.3",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
-    "htmx.org": "^1.9.12",
-    "json-server": "^1.0.0-beta.3",
-    "nunjucks": "^3.2.4",
-    "pug": "^3.0.3",
-    "pug-html-loader": "^1.1.7",
-    "pug-plugin": "^6.0.0",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
-    "ts-loader": "^9.5.2",
     "vite": "^6.1.1",
-    "vite-plugin-pug": "^0.4.1",
+    "vite-plugin-image-optimizer": "^1.1.8",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
