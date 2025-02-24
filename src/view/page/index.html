@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users Table</title>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script type="module" src="./src/index.js"></script>
-  </head>
-  <body>
-    <users-table></users-table>
+{% extends "src/view/layout/default.html" %}
 
-  </body>
-</html> 
+{% set page = {
+  title: "Pryann",
+  description: "Frontend starter kit by Pryann",
+  keywords: "front-end, starter kit, Pryann"
+} %}
+
+{% block head %}
+   <script type="module" src="./index.js"></script>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Főoldal</h1>
+        <p>Tartalom...</p>
+    </main>
+{% endblock %}

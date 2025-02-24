@@ -9,12 +9,22 @@ export default defineConfig({
       templatesDir: './src/view',
     }),
   ],
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  },
   root: path.join(__dirname, "src"),
+  server: {
+    fs: {
+      allow: ['..']
+    }
+  },
   build: {
     outDir: path.join(__dirname, "dist"),
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src', 'view', 'index.html'),
+        main: path.resolve(__dirname, 'src', 'view', 'page', 'index.html'),
       }
     },
   },
