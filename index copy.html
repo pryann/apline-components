@@ -1,0 +1,30 @@
+<% 
+const page = {
+  domain: "example.com",
+  title: "My vue project!",
+  description: "Page description here. Less than 200 characters",
+  og: {
+    type: "Page Type Here",
+    title: "Title Here",
+    description: "Description Here",
+    url: "http://www.example.com/",
+    image: "http://example.com/image.jpg"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Title Here",
+    description: "Page description here. Less than 200 characters",
+    site: "@publisher",
+    creator: "@author_handle",
+    image: "http://www.example.com/image.jpg"
+  },
+};
+%>
+
+<head>
+    <meta name="robots" content="index,nofollow">
+
+</head>
+
+<%- include("./src/view/layout/default.html", { page: page, }); %>
+

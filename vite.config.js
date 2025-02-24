@@ -1,30 +1,22 @@
-import { defineConfig } from 'vite'
-import nunjucks from 'vite-plugin-nunjucks'
+import { defineConfig } from 'vite';
+import nunjucks from 'vite-plugin-nunjucks';
+import path from "path";
+import { sync as globSync } from "glob";
 
 export default defineConfig({
   plugins: [
     nunjucks({
       templatesDir: './src/view',
-      nunjucksConfigure: {
-        autoescape: true,
-        throwOnUndefined: false,
-      },
     }),
   ],
-  server: {
-    port: 5173,
-    open: true,
-    watch: {
-      usePolling: true,
-      ignored: ['!**/node_modules/**']
-    }
-  },
+  root: path.join(__dirname, "src"),
   build: {
-    outDir: 'dist',
-    emptyOutDir: false, // Don't empty the dist folder as Eleventy uses it too
+    outDir: path.join(__dirname, "dist"),
     rollupOptions: {
-      input: './src/view/page/index.njk'
-    }
+      input: {
+        main: path.resolve(__dirname, 'src', 'view', 'index.html'),
+      }
+    },
   },
   css: {
     preprocessorOptions: {
@@ -34,4 +26,4 @@ export default defineConfig({
       },
     },
   }
-})
+});
