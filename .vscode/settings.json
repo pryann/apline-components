@@ -1,0 +1,12 @@
+{
+  "material-icon-theme.files.associations": {
+    "*.html": "nunjucks"
+  },
+  "emmet.includeLanguages": {
+    "njk": "html",
+    "html": "html"
+  },
+  "files.associations": {
+    "*.html": "njk"
+  }
+}
