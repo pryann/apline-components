@@ -1,6 +1,6 @@
-@use "variables" as *;
+@use './variables';
 
 body {
-  background: $white;
+  background: variables.$white;
   min-height: 100vh;
 }

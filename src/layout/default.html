@@ -7,21 +7,21 @@
     <link rel="author" type="text/plain" href="humans.txt">
     <meta name="robots" content="index,follow">
     <meta name="description" content="{{ page.description }}">
-    {% include "../module/validator.html" %}
-    {% include "../module/sitemap.html" %}
-    {% include "../module/favicon.html" %}
+    {% include "../template/validator.html" %}
+    {% include "../template/sitemap.html" %}
+    {% include "../template/favicon.html" %}
+    <link href="/css/main.css" rel="stylesheet">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="../assets/scss/main.scss">
     <script type="module">
-        import Alpine from 'alpinejs'
-        window.Alpine = Alpine
-        Alpine.start()
+        import Alpine from 'alpinejs';
+        window.Alpine = Alpine;
+        Alpine.start();
     </script>
     {% block head %}{% endblock %}
 </head>
 <body>
-    {% include "../module/google-tag-manager.html" %}
+    {% include "../template/google-tag-manager.html" %}
     {% block content %}{% endblock %}
-    {% include "../section/siteFooter.html" %}
+    <img src="../../public/img/webinar.jpg" alt="sdsd">
 </body>
 </html>

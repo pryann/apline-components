@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import nunjucks from 'vite-plugin-nunjucks';
 import path from "path";
 import { sync as globSync } from "glob";
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [
@@ -14,7 +15,7 @@ export default defineConfig({
     port: 8088,
     open: true,
     fs: {
-      allow: ['..']
+      allow: ['..', 'node_modules']
     }
   },
   build: {
@@ -28,14 +29,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "bulma/sass/utilities/_index" as *;`,
         charset: false,
       },
     },
   },
-  resolve: {
-    alias: {
-     '@': path.resolve(__dirname, '.'),
-    }
+  alias: {
+    '@': fileURLToPath(new URL('./src', import.meta.url)),
   },
 });

@@ -1,5 +1,5 @@
 export class AlpineComponent extends HTMLElement {
-  constructor(template, componentFunction) {
+  constructor(template, componentFunction = () => {}) {
     super()
     this.template = template
     this.componentFunction = componentFunction
