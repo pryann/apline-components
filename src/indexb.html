@@ -1,0 +1,38 @@
+{% extends "src/layout/default.html" %}
+
+{% set page = {
+  title: "Pryann",
+  description: "Frontend starter kit by Pryann",
+  og: {
+    type: "website",
+    title: "Pryann",
+    description: "Frontend starter kit by Pryann",
+    image: "https://pryann.com/assets/images/og-image.png",
+    url: "https://pryann.com"
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@pryann",
+    title: "Pryann",
+    description: "Frontend starter kit by Pryann",
+    creator: "@pryann",
+    image: "https://pryann.com/assets/images/og-image.png"
+  }
+} %}
+
+{% block head %}
+   <script type="module">
+      import './component/usersTable'
+      import './component/siteFooter'
+   </script>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <users-table></users-table>
+        <site-footer></site-footer>
+    </main>
+    <img src="/img/webinar.jpg" alt="sdsd">
+    <img src="/img/webinars.jpg" alt="sdsd">
+    <img src="/img/webinar.jpg" alt="sdsd">
+{% endblock %}

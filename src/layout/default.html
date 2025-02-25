@@ -7,10 +7,10 @@
     <link rel="author" type="text/plain" href="humans.txt">
     <meta name="robots" content="index,follow">
     <meta name="description" content="{{ page.description }}">
-    {% include "../template/validator.html" %}
-    {% include "../template/sitemap.html" %}
-    {% include "../template/favicon.html" %}
-    <link href="/css/main.css" rel="stylesheet">
+    {% include "../partial/validator.html" %}
+    {% include "../partial/sitemap.html" %}
+    {% include "../partial/favicon.html" %}
+    <link href="/assets/css/style.css" rel="stylesheet">
     <title>{{ page.title }}</title>
     <script type="module">
         import Alpine from 'alpinejs';
@@ -20,8 +20,8 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    {% include "../template/google-tag-manager.html" %}
+    {% include "../partial/google-tag-manager.html" %}
     {% block content %}{% endblock %}
-    <img src="../../public/img/webinar.jpg" alt="sdsd">
+
 </body>
 </html>
