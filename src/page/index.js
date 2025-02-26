@@ -1,2 +1,2 @@
-import './component/usersTable'
-import './component/siteFooter'
+import '../component/usersTable'
+import '../component/siteFooter'

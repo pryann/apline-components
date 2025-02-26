@@ -13,13 +13,14 @@ export default defineConfig({
       ],
       input: {
         index: 'src/page/index.js',
-        default: 'src/layout/default.js'
+        default: 'src/layout/default/default.js'
       },
       output: {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].js',
         assetFileNames: '[name].[ext]'
       }
-    }
+    },
+    assetsInclude: ['**/*.pug']
   }
 });

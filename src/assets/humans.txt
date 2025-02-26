@@ -1,5 +1,0 @@
-/* TEAM */
-
-Frontend: Gáll Gergely
-Site: pryann@gmail.com
-Location: Budapest, Hungary
