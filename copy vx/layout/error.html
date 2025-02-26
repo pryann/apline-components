@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags and title -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>{{ title }}</title>
+    <!-- Basic meta tags -->
+    <meta name="robots" content="noindex,nofollow">
+    <!-- Your header links, scripts, etc. -->
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<!-- Start site content -->
+{% block content %}
+{% endblock %}
+<!-- End site content -->
+ 
+<!-- Start footer scripts -->
+{% block footerscripts %}
+{% endblock %}
+<!-- End footer scripts -->
+</body>
+</html>

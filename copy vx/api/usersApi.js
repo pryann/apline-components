@@ -1,5 +1,4 @@
-import axios from '../../node_modules/axios/dist/esm/axios.js'
-
+import axios from '/node_modules/axios/dist/esm/axios.js';
 
 export async function getUsers(params) {
   const { skip, take, sortField, sortOrder } = params

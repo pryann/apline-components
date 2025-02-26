@@ -1,0 +1,27 @@
+@use '../../assets/scss/mixins/hover-underline-animation' as *
+@use 'bulma/sass/utilities/initial-variables' as *
+
+footer
+  margin: auto 0 0 0
+  text-align: center
+  @media (min-width: $tablet)
+    text-align: left
+  *
+    color: $white-ter
+
+.company-info
+  margin: 1rem 0
+
+.manuals-nav a,
+.contact-nav a
+  margin: 0 0 0.5rem 0
+  padding: 0 0 0.1rem 0
+  @include hover-underline-animation($white, $white, 1px)
+
+.contact-nav .icon
+  margin: 0 0.5rem 0 0
+  text-align: left
+  width: 2ch
+
+.follow-us-nav a
+  margin: 0 1rem 0 0

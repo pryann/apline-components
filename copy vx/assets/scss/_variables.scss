@@ -1,0 +1,33 @@
+
+$white: hsl(0, 0%, 100%); // #FFFFFF
+$black: hsl(0, 0%, 0%); // #000000
+$orange: hsl(23, 94%, 49%); // #F16107
+$yellow: hsl(45, 100%, 65%); // #FFD44F
+$green: hsl(148, 42%, 59%); // #69C293
+$red: hsl(358, 71%, 48%); // #D1232A
+$blue: hsl(205, 100%, 31%); // #005D9F
+$cyan: hsl(196, 100%, 47%); // #00AEEF
+$turquoise: $green;
+$purple: hsl(253, 31%, 60%); // #887AB9
+
+// recent logo blues
+// $blue: 	hsl(224, 56%, 31%);     // #233B7D
+// $cyan: 	hsl(197, 84%, 60%);     // #41BEEF
+// ORTO blues
+// Pastel variation
+// $orange: 	hsl(24, 94%, 81%);    // #FCC6A3
+// $yellow: 	hsl(42, 100%, 89%);   // #FFEEC6
+// $green: 	hsl(122, 100%, 94%);    // #DFF0E4
+// $red: 	hsl(13, 67%, 62%);        // #DF795E
+// $blue: 	hsl(205, 100%, 34%);    // #0065AB
+// $cyan: 	hsl(205, 96%, 91%);     // #D0EBFE
+// // unused turquoise, and purple
+// $turquoise: $green;
+// $purple: hsl(245, 100%, 90%);    // #CDC7E3
+
+$link: $blue;
+$primary: $cyan;
+$link-hover: $cyan;
+$family-sans-serif: 'Roboto', sans-serif;
+$family-header: 'Oswald', sans-serif;
+$navbar-breakpoint: 1216px;
