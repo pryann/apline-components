@@ -1,21 +1,33 @@
 {
   "scripts": {
-    "build-css": "sass --load-path=node_modules ./src/assets/scss/main.scss ./public/css/main.css  --style compressed",
-    "start": "npm run build-css -- --watch",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "devp": "parcel src/index.html",
-    "buildp": "parcel build l.pug"
+    "start": "webpack serve --mode=development",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production",
+    "clean": "rimraf dist"
   },
   "type": "module",
+  "staticFiles": {
+    "staticPath": "static",
+    "staticOutPath": "."
+  },
+  "alias": {
+    "assets/*": "./src/assets/$1"
+  },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.13.3",
+    "@parcel/packager-xml": "^2.13.3",
     "@parcel/transformer-pug": "^2.13.3",
     "@parcel/transformer-sass": "^2.13.3",
+    "@parcel/transformer-webmanifest": "^2.13.3",
+    "@parcel/transformer-xml": "^2.13.3",
     "@vitejs/plugin-legacy": "^6.0.2",
+    "buffer": "^6.0.3",
     "nunjucks": "^3.2.4",
     "parcel": "^2.13.3",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "parcel-transformer-nunjucks": "^1.0.1",
+    "process": "^0.11.10",
+    "pug-plugin": "^6.0.0",
     "sass": "^1.85.0",
     "vite-plugin-nunjucks": "^0.2.0",
     "vite-plugin-pug": "^0.4.1"
@@ -24,17 +36,26 @@
     "alpinejs": "^3.14.8",
     "axios": "^1.7.9",
     "bulma": "^0.9.4",
+    "compression-webpack-plugin": "^11.1.0",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "esbuild-loader": "^4.3.0",
     "glob": "^11.0.1",
+    "html-bundler-webpack-plugin": "^4.18.0",
     "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
     "sass-loader": "^16.0.5",
+    "speed-measure-webpack-plugin": "^1.5.0",
     "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
     "vite": "^6.1.1",
     "vite-plugin-ejs": "^1.7.0",
     "vite-plugin-handlebars": "^2.0.0",
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-image-optimizer": "^1.1.8",
     "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   }

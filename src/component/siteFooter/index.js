@@ -1,5 +1,5 @@
-import template from './siteFooter.html?raw'
-import './siteFooter.scss'
+import template from './siteFooter.pug'
+import './siteFooter.sass'
 import { AlpineComponent } from '../../core/AlpineComponent'
 
 class SiteFooter extends AlpineComponent {

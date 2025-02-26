@@ -1,5 +1,5 @@
-import template from './usersTable.html?raw'
-import './usersTable.css'
+import template from './usersTable.pug'
+import './usersTable.sass'
 import {usersTable} from './usersTable'
 import { AlpineComponent } from '../../core/AlpineComponent'
 

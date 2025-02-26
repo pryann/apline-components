@@ -1,0 +1,30 @@
+extends ./layout/default.pug
+
+append variables
+  -
+    var page = {
+      title: 'Pryann',
+      description: 'Frontend starter kit by Pryann',
+      og: {
+        type: 'website',
+        title: 'Pryann',
+        description: 'Frontend starter kit by Pryann',
+        image: 'https://pryann.com/assets/images/og-image.png',
+        url: 'https://pryann.com'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@pryann',
+        title: 'Pryann',
+        description: 'Frontend starter kit by Pryann',
+        creator: '@pryann',
+        image: 'https://pryann.com/assets/images/og-image.png'
+      }
+    }
+
+block head
+  script(type="module" src="./index.js").
+block content
+  main
+    users-table
+    site-footer
