@@ -13,7 +13,7 @@ export default defineConfig({
         /^node_modules/ 
       ],
       input: {
-        index: 'src/page/index.js',
+        index: 'src/page/index/index.js',
         default: 'src/layout/default/default.js'
       },
       output: {
