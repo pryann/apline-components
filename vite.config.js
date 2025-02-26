@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [
     pugPlugin() 
   ],
+  assetsInclude: ['**/*.pug'],
   build: {
     rollupOptions: {
       external: [
@@ -20,7 +21,6 @@ export default defineConfig({
         chunkFileNames: '[name].js',
         assetFileNames: '[name].[ext]'
       }
-    },
-    assetsInclude: ['**/*.pug']
+    }
   }
 });

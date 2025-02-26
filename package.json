@@ -1,6 +1,7 @@
 {
   "scripts": {
     "dev": "vite",
+     "build:pug": "pug src/ --out dist/",
     "build": "vite build",
     "preview": "vite preview"
   },
